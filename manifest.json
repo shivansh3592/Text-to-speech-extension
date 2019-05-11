@@ -1,0 +1,26 @@
+{
+  "name": "Text To Voice",
+  "version": "1.0",
+  "description": "Select the text, you want to hear. Simply, tap on extension's icon to read ",
+  "background": {
+      "page": "background.html",
+
+
+    "js": ["background.js", "speak.js"],
+    "persistent": false
+  },
+"content_scripts": [
+{
+"matches": ["<all_urls>"],
+"js": ["contentScript.js"]
+}
+],
+"browser_action": {
+"default_icon": "start.png"
+
+},
+"permissions": [
+"activeTab","storage"
+],
+"manifest_version": 2
+}
